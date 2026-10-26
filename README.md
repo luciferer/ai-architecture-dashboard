@@ -71,3 +71,7 @@ node --test tests/layout.test.cjs
 ## 项目许可
 
 项目代码采用 [MIT License](LICENSE)。随仓库提供的 Cytoscape.js 保留其原有 MIT 许可与版权声明，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+## 交流社区
+
+[LINUX DO](https://linux.do/)：感谢社区提供开源项目交流与反馈的空间。项目使用问题和改进建议也可通过本仓库 Issues 反馈。
