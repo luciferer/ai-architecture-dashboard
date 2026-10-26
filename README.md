@@ -2,6 +2,14 @@
 
 只读看板，用于发现 MCP 注册、Skills、插件、Hooks，以及用户显式提供的 Codex 或 Claude JSONL 观察记录。默认启动使用合成演示数据；不会扫描用户目录或读取本机配置。
 
+## 合成演示预览
+
+以下截图只使用随仓库提供的合成数据。
+
+![组件关系演示](docs/demo-components.png)
+
+![会话、代理和工具调用分支演示](docs/demo-runtime.png)
+
 ## 快速启动
 
 需要 Python 3.11 或更新版本。Python 程序只使用标准库；浏览器图形库已随仓库提供。
@@ -53,6 +61,12 @@ python3 -m unittest discover -s tests -v
 ```
 
 测试会在临时目录中生成合成配置树和 trace 文件，不需要读取真实客户端设置或日志。
+
+前端布局回归可使用 Node.js 运行（应用本身不依赖 Node.js）：
+
+```sh
+node --test tests/layout.test.cjs
+```
 
 ## 项目许可
 

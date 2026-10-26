@@ -20,6 +20,10 @@ class PublicDefaultsTests(unittest.TestCase):
         self.assertNotIn('/' + 'Users' + '/', serialized)
         self.assertNotIn('AI-' + 'Dotfiles', serialized)
         self.assertNotIn('credential' + '-broker', serialized)
+        component_positions = {node['kind']: node['positions']['components'] for node in graph['nodes']}
+        self.assertLess(component_positions['client']['x'], component_positions['mcp']['x'])
+        self.assertEqual({component_positions[kind]['x'] for kind in ('mcp', 'skill', 'plugin', 'hook')}, {480})
+        self.assertEqual(len({component_positions[kind]['y'] for kind in ('mcp', 'skill', 'plugin', 'hook')}), 4)
 
     def test_demo_timestamps_are_frozen_per_instance_and_scan_is_stable(self):
         collector = DemoCollector()

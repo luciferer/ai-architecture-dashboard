@@ -13,11 +13,11 @@ class DemoCollector:
 
     def collect(self):
         nodes = [
-            {"id": "client:codex", "kind": "client", "label": "Codex 示例", "clients": ["codex"], "status": "configured", "sources": []},
-            {"id": "demo:mcp:research", "kind": "mcp", "label": "research-server", "clients": ["codex"], "status": "configured", "enabled": True, "transport": "stdio", "env_variable_count": 0, "scopes": ["global"], "sources": ["synthetic demo"], "runtime_status": "示例；未连接"},
-            {"id": "demo:skill:review", "kind": "skill", "label": "review-notes", "clients": ["codex"], "status": "discovered", "scopes": ["user"], "sources": ["synthetic demo"], "runtime_status": "示例；未执行"},
-            {"id": "demo:plugin:calendar", "kind": "plugin", "label": "calendar-tools", "clients": ["codex"], "status": "configured", "enabled": True, "scopes": ["plugin"], "sources": ["synthetic demo"], "runtime_status": "示例；未探测"},
-            {"id": "demo:hook:events", "kind": "hook", "label": "示例 Hooks", "clients": ["codex"], "status": "discovered", "scopes": ["global"], "event_counts": {"SessionStart": 1, "PostToolUse": 2}, "sources": ["synthetic demo"], "runtime_status": "仅示例事件数量"},
+            {"id": "client:codex", "kind": "client", "label": "Codex 示例", "clients": ["codex"], "status": "configured", "sources": [], "positions": {"components": {"x": 100, "y": 282}}},
+            {"id": "demo:mcp:research", "kind": "mcp", "label": "research-server", "clients": ["codex"], "status": "configured", "enabled": True, "transport": "stdio", "env_variable_count": 0, "scopes": ["global"], "sources": ["synthetic demo"], "runtime_status": "示例；未连接", "positions": {"components": {"x": 480, "y": 110}}},
+            {"id": "demo:skill:review", "kind": "skill", "label": "review-notes", "clients": ["codex"], "status": "discovered", "scopes": ["user"], "sources": ["synthetic demo"], "runtime_status": "示例；未执行", "positions": {"components": {"x": 480, "y": 225}}},
+            {"id": "demo:plugin:calendar", "kind": "plugin", "label": "calendar-tools", "clients": ["codex"], "status": "configured", "enabled": True, "scopes": ["plugin"], "sources": ["synthetic demo"], "runtime_status": "示例；未探测", "positions": {"components": {"x": 480, "y": 340}}},
+            {"id": "demo:hook:events", "kind": "hook", "label": "示例 Hooks", "clients": ["codex"], "status": "discovered", "scopes": ["global"], "event_counts": {"SessionStart": 1, "PostToolUse": 2}, "sources": ["synthetic demo"], "runtime_status": "仅示例事件数量", "positions": {"components": {"x": 480, "y": 455}}},
         ]
         edges = [
             {"id": "demo:edge:mcp", "source": "client:codex", "target": "demo:mcp:research", "label": "示例注册", "relation_type": "registration"},
